@@ -1,0 +1,117 @@
+﻿<Window x:Class="VK_Music.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		Height="390.25" 
+		Width="525" 
+		Style="{DynamicResource VkWindowStyle}"
+		WindowStartupLocation="CenterScreen" Icon="Image/main.ico" Loaded="Window_Loaded">
+
+    <Grid 
+		Height="333" 
+		VerticalAlignment="Top" 
+		Width="506.225" 
+		Margin="0,-40,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="25"/>
+            <RowDefinition Height="131*"/>
+        </Grid.RowDefinitions>
+
+        <Grid Margin="122,-21.5,207,21.5">
+            <Label
+				x:Name="first_second_name" 
+				Height="40" 
+				Width="180" 
+				Foreground="White"
+				FontFamily="Segoe UI"
+				FontWeight="Bold"
+				HorizontalContentAlignment="Left"
+				VerticalContentAlignment="Center"
+				Content="" Margin="0,20,-2.775,-15.03"
+				/>
+        </Grid>
+        <ListBox
+        x:FieldModifier="public"
+		x:Name="listBoxSong"
+		HorizontalAlignment="Left"
+		Height="247" 
+		Margin="10,48,0,-27.795" 
+		Grid.Row="2" 
+		VerticalAlignment="Top" 
+		Width="487" 
+		BorderThickness="1"
+		Background="#efeff2">
+        </ListBox>
+        <Grid 
+		HorizontalAlignment="Left" 
+		x:FieldModifier="public"
+		x:Name="statusGrid" 
+		Height="42" 
+		Margin="10,1,0,0" 
+		Grid.Row="2" 
+		VerticalAlignment="Top" 
+		Width="486">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="391*"/>
+                <ColumnDefinition Width="95*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="9*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Border 
+				BorderBrush="#54769a" 
+				BorderThickness="1" 
+				HorizontalAlignment="Left" 
+				Height="42" 
+				VerticalAlignment="Top" 
+				Width="486" Grid.RowSpan="2" Grid.ColumnSpan="2"
+			>
+                <Grid Margin="9,24.667,-1,0">
+                    <Slider x:Name="Slider_Song" Style="{DynamicResource StyleForSlider}" Margin="0,0,98,0"
+                            Cursor="Hand" 
+                            PreviewMouseLeftButtonUp="Slider_Song_PreviewMouseLeftButtonUp"/>
+                    <Slider 
+                        Cursor="Hand"
+                 x:FieldModifier="public"
+				x:Name="Slider_Volume" 
+				HorizontalAlignment="Left" 
+				VerticalAlignment="Top" 
+				Width="68" 
+				Margin="398,0,0,0" 
+				Style="{DynamicResource StyleForSlider}"
+				Minimum="0"
+				Maximum="100"
+				Value="75"
+                ValueChanged="Slider_Volume_ValueChanged"/>
+                </Grid>
+            </Border>
+        </Grid>
+        <Expander x:Name="ExpanderMenu"
+			Header="Меню" 
+			HorizontalAlignment="Left" 
+			Margin="0,0,0,0" Grid.Row="1" 
+			VerticalAlignment="Top" Grid.RowSpan="2"
+			BorderThickness="0"
+			BorderBrush="#54769a" Width="100"
+		>
+            <Grid Background="#54769a" Height="75.667" Margin="0,0,-22,0" Width="120">
+                <Button x:Name="In_account_button" Width="120" Style="{DynamicResource VkWindowStyleTitleBarButton}" Margin="0,0,0,52.373" Click="In_account_button_Click" >
+                    <TextBlock
+						x:Name="Input"
+						FontFamily="Tahoma"
+						FontWeight="Bold"
+						Foreground="White"
+						Text="Вход в аккаунт"
+						HorizontalAlignment="Center"
+						VerticalAlignment="Center"
+				/>
+                </Button>
+            </Grid>
+        </Expander>
+    </Grid>
+
+</Window>
+
+
+

@@ -1,0 +1,51 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	x:Class="VK_Music.Authorization"
+	x:Name="Window"
+	Title="Authorization"
+	Width="359" Height="193.667"
+	WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize"
+	Background="#e9edf1"
+	>
+
+	<Grid x:Name="Grid">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="35*"/>
+			<RowDefinition Height="128*"/>
+		</Grid.RowDefinitions>
+		<Label 
+		Content="Вход" 
+		HorizontalAlignment="Left" 
+		VerticalAlignment="Top" 
+		Height="35" 
+		Width="359" 
+		Background="#cfd6dc"
+		FontFamily="Tahoma"
+		FontSize="14"
+		FontWeight="Bold"
+		Foreground="#4e6a87"
+		/>
+		<Label Content="Телефон или e-mail" HorizontalAlignment="Left" Margin="23.332,24.332,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource LabelStyleTahoma2}"/>
+		<TextBox x:Name="login_box" HorizontalAlignment="Left" Height="23" Margin="145.862,27.292,0,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="195.333"/>
+		<Label Content="Пароль" HorizontalAlignment="Left" Margin="89.748,50.292,0,0" Grid.Row="1" VerticalAlignment="Top" Style="{DynamicResource LabelStyleTahoma2}"/>
+		<PasswordBox x:Name="password_box" HorizontalAlignment="Left" Margin="145.862,55.292,0,0" Grid.Row="1" VerticalAlignment="Top" Width="195.333"/>
+		<Button x:Name="input_button" HorizontalAlignment="Left" Margin="67.195,107,0,0" Grid.Row="1" VerticalAlignment="Top" Width="83" Height="29" Style="{DynamicResource VkWindowStyleButton}" Click="input_button_Click">
+			<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Text="Войти" Style="{DynamicResource TextBlockStyleTahoma}"/>
+		</Button>
+		<Button x:Name="cancel_button" HorizontalAlignment="Left" Margin="195.195,107,0,0" Grid.Row="1" VerticalAlignment="Top" Width="83" Height="29" Style="{DynamicResource VkWindowStyleButton}" Click="cancel_button_Click">
+			<TextBlock HorizontalAlignment="Center" TextWrapping="Wrap" VerticalAlignment="Center" Text="Отмена" Style="{DynamicResource TextBlockStyleTahoma}" Margin="17.647,6.52,19.646,6.52" Width="45.707"/>
+		</Button>
+		<CheckBox 
+         x:FieldModifier="public"
+            Name="checkboxSave"
+		Content="Запомнить меня" 
+		HorizontalAlignment="Left" 
+		Margin="117.333,81.251,0,0" 
+		Grid.Row="1" 
+		VerticalAlignment="Top" 
+		Width="110.42"
+		FontFamily="Segoe UI" Checked="checkboxSave_Checked"
+		/>
+	</Grid>
+</Window>
